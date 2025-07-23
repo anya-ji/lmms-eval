@@ -132,6 +132,8 @@ def split_model(model_name, num_layers=None):
     world_size = torch.cuda.device_count()
     if num_layers is None:
         num_layers = {
+            "InternVL3-2B": 24,
+            "InternVL3-8B": 32,
             "InternVL2_5-1B": 24,
             "InternVL2_5-2B": 24,
             "InternVL2_5-4B": 36,
